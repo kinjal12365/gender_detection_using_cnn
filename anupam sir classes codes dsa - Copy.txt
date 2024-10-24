@@ -1,0 +1,85 @@
+1 odd and even number printing in an array
+#include <stdio.h>
+
+int main() {
+    int n, i;
+
+    // Input the size of the array
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    // Input elements into the array
+    printf("Enter the elements of the array:\n");
+    for(i = 0; i < n; i++) {
+        printf("Element %d: ", i+1);
+        scanf("%d", &arr[i]);
+    }
+
+    // Print even numbers
+    printf("Even numbers in the array are:\n");
+    for(i = 0; i < n; i++) {
+        if(arr[i] % 2 == 0) {
+            printf("%d ", arr[i]);
+        }
+    }
+
+    // Print odd numbers
+    printf("\nOdd numbers in the array are:\n");
+    for(i = 0; i < n; i++) {
+        if(arr[i] % 2 != 0) {
+            printf("%d ", arr[i]);
+        }
+    }
+    
+    printf("\n");
+
+    return 0;
+}
+
+
+2 cocatination of array
+
+#include <stdio.h>
+
+int main()
+{
+    int a[3], b[4], c[7], i, j;  // Define arrays a, b, and c with proper sizes and declare j
+    
+    // Input for array a
+    printf("Enter the numbers of array a:\n");
+    for(i = 0; i < 3; i++)
+    {
+        printf("Element %d is: ", i+1);
+        scanf("%d", &a[i]);
+    }
+    
+    // Input for array b
+    printf("Enter the numbers of array b:\n");
+    for(i = 0; i < 4; i++)
+    {
+        printf("Element %d is: ", i+1);
+        scanf("%d", &b[i]);
+    }
+    
+    // Merging arrays a and b into c
+    for(i = 0; i < 3; i++)
+    {
+        c[i] = a[i];
+    }
+    for(j = 0; j < 4; j++)
+    {
+        c[j+3] = b[j];
+    }
+
+    // Printing array c
+    printf("Merged array c is:\n");
+    for(i = 0; i < 7; i++)
+    {
+        printf("%d ", c[i]);
+    }
+    printf("\n");
+    
+    return 0;
+}
